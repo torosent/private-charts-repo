@@ -1,0 +1,29 @@
+{
+  "name": "http-git-mirror",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/torosent/http-git-mirror.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/torosent/http-git-mirror/issues"
+  },
+  "homepage": "https://github.com/torosent/http-git-mirror#readme",
+  "dependencies": {
+    "dotenv-extended": "^2.0.1",
+    "express": "^4.16.2",
+    "fs-extra": "^4.0.3",
+    "nodegit": "^0.20.3",
+    "promisify-node": "^0.4.0"
+  },
+  "devDependencies": {
+    "eslint-config-google": "^0.9.1"
+  }
+}
