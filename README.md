@@ -9,6 +9,8 @@ This is an example of a private helm charts repository. The http server clones a
 
 ### Setup server
 
+#### Local
+
 ```console
 
 $ export GIT_REPO=
@@ -20,14 +22,28 @@ $ node index.js
 
 ```
 
-Or just build and run the container
+#### Docker
+
+Build and run the container
 
 ```console
 
 $ docker build -t ****/privatehelmrepo .
 $ docker run -e GIT_REPO=**** -e GIT_USERNAME=**** -e GIT_PASSWORD=**** -e GIT_TYPE=**** ****/privatehelmrepo
 
-``` 
+```
+
+#### Kubernetes
+
+edit the `deployment.yaml`, `service.yaml` and `secret.yaml` files
+
+```console
+
+$ kubectl create -f secret.yaml
+$ kubectl create -f deployment.yaml
+$ kubectl create -f service.yaml
+
+```
 
 ### Setup charts and client
 
