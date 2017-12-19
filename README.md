@@ -1,4 +1,4 @@
-# Private Helm Repo
+# Private Helm Charts Repo
 
 This is an example of a private helm charts repository. The http server clones a private GitHub or BitBucket repo and serve the files. 
 
