@@ -24,12 +24,8 @@ Or just build and run the container
 
 ```console
 
-$ export GIT_REPO=
-$ export GIT_USERNAME=
-$ export GIT_PASSWORD= #token for GitHub or password for BitBucket
-$ export GIT_TYPE= #github or bitbucket
 $ docker build -t ****/privatehelmrepo .
-$ docker run ****/privatehelmrepo
+$ docker run -e GIT_REPO=**** -e GIT_USERNAME=**** -e GIT_PASSWORD=**** -e GIT_TYPE=**** ****/privatehelmrepo
 
 ``` 
 
