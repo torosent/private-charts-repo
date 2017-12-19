@@ -3,7 +3,7 @@ let app = express();
 let path = require('path');
 let git = require("./gitrepo");
 
-let port = process.env.PORT || 3000
+let port = process.env.PORT || 8080
 
 exports.initHttpServer = function (dirpath) {
     app.get('/*', function (req, res) {
