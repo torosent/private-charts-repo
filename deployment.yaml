@@ -1,0 +1,31 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: private-charts-repository
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: private-charts-repository
+    spec:
+      containers:
+      - name: private-charts-repository
+        image: torosent/private-charts-repository:latest
+        ports:
+        - containerPort: 8080
+        env:
+        - name: GIT_REPO
+          value: ""
+        - name: GIT_USERNAME
+          valueFrom:
+              secretKeyRef:
+                name: gitrepo
+                key: GIT_USERNAME
+        - name: GIT_PASSWORD
+          valueFrom:
+              secretKeyRef:
+                name: gitrepo
+                key: GIT_PASSWORD
+        - name: GIT_TYPE
+          value: ""

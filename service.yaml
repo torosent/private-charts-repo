@@ -1,0 +1,14 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: private-charts-repository
+  labels:
+   app: private-charts-repository
+spec:
+  selector:
+    app: private-charts-repository
+  ports:
+  - protocol: "TCP"
+    port: 8080
+    targetPort: 8080
+  type: ClusterIP

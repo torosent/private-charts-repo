@@ -4,3 +4,4 @@ logs
 *.md
 .gitignore
 .eslintrc
+*.yaml
